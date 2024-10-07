@@ -23,7 +23,7 @@ This package is a rewrite of https://github.com/unrealspeech/unrealspeech-js to 
 
 Their first-party JS package has several issues:
 
-- it has a bogus dependency `fs`
+- it has a bogus dependency on `fs` which doesn't inspire confidence
 - it uses `node-fetch` instead of universal `fetch`
 - it includes additional Node.js-specific functionality related to playing media via ffmpeg, which doesn't belong in this type of NPM package
 - some of the types are also incorrect
