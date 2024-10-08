@@ -131,6 +131,8 @@ export class UnrealSpeechClient {
       Pitch: pitch
     }
 
-    return this.ky.post('speech', { json }).json<SpeechResponse>()
+    return this.ky
+      .post('speech', { json, timeout: 180_000 })
+      .json<SpeechResponse>()
   }
 }
