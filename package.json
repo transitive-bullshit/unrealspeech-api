@@ -1,6 +1,6 @@
 {
   "name": "unrealspeech-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript client for the Unreal Speech TTS API.",
   "author": "Travis Fischer <travis@transitivebullsh.it>",
   "license": "MIT",
