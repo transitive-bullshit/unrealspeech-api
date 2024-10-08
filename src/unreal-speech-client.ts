@@ -112,7 +112,8 @@ export class UnrealSpeechClient {
     bitrate = '192k',
     timestampType = 'sentence',
     speed = 0,
-    pitch = 1.0
+    pitch = 1.0,
+    timeoutMs = 180_000
   }: {
     text: string
     voiceId?: string
@@ -120,6 +121,7 @@ export class UnrealSpeechClient {
     timestampType?: TimestampType
     speed?: number
     pitch?: number
+    timeoutMs?: number
   }): Promise<SpeechResponse> {
     const json: SpeechPayload = {
       Text: text,
@@ -132,7 +134,7 @@ export class UnrealSpeechClient {
     }
 
     return this.ky
-      .post('speech', { json, timeout: 180_000 })
+      .post('speech', { json, timeout: timeoutMs })
       .json<SpeechResponse>()
   }
 }
